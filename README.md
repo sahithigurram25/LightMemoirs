@@ -1,2 +1,2 @@
 # LightMemoirs
-Light Memoirs is the showcase of my photography and videography
+Light Memoirs is a showcase of my photography and videography
