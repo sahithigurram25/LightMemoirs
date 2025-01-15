@@ -1,5 +1,7 @@
 const imageContainer = document.getElementById('imageContainer');
+console.log("image container got"); 
 imageContainer.innerHTML = '<img src="/LightMemoirs/Images/About/DSC06071.JPG" alt="Description of the image" class="image-placeholder">';
+console.log("image container set"); 
 //imageContainer.style.backgroundImage = "url('Images/About/DSC06071.JPG')";
 //imageContainer.style.backgroundSize = "cover";
 //imageContainer.style.backgroundPosition = "center";
