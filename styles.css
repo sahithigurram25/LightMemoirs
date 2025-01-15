@@ -104,7 +104,7 @@ footer {
 	width: 200px; /* Set width of the placeholder */
     	height: 200px; /* Set height of the placeholder */
    	background-color: #cccccc; /* Set placeholder background color */
-	border-radius: 50% /*Makes the placeholder a circle*/
+	border-radius: 50%; /*Makes the placeholder a circle*/
    	display: flex;
     	align-items: center;
     	justify-content: center;
