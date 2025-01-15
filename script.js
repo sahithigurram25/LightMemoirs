@@ -1,5 +1,5 @@
 const imageContainer = document.getElementById('imageContainer');
-imageContainer.innerHTML = '<img src="Images/About/DSC06071.JPG" alt="About image" style="width: 100%; height: auto;">';
+imageContainer.innerHTML = '<img src="Images/About/DSC06071.JPG" alt="Description of the image" class="image-placeholder">';
 //imageContainer.style.backgroundImage = "url('Images/About/DSC06071.JPG')";
 //imageContainer.style.backgroundSize = "cover";
 //imageContainer.style.backgroundPosition = "center";
