@@ -1,9 +1,5 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+const imageContainer = document.getElementById('imageContainer');
+imageContainer.style.backgroundImage = "url('Images/About/DSC06071.JPG')";
+imageContainer.style.backgroundSize = "cover";
+imageContainer.style.backgroundPosition = "center";
+imageContainer.textContent = ""; // Remove placeholder text
