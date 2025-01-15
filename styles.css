@@ -100,7 +100,7 @@ footer {
 }
 
 /* About image placeholder */
-.image-placeholder {
+.image-container {
 	width: 200px; /* Set width of the placeholder */
     	height: 200px; /* Set height of the placeholder */
    	background-color: #cccccc; /* Set placeholder background color */
