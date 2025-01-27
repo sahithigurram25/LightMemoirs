@@ -8,7 +8,7 @@ const imageDir = rootDir + "/Images/About/DSC06071.JPG";
 //imageContainer.className = "image-placeholder";
 //imageContainer.src = imageDir;
 console.log("image root" + imageContainer.src);
-imageContainer.innerHTML = '<img src="/Images/About/DSC06071.JPG" class="image-placeholder">';
+imageContainer.innerHTML = '<img src="LightMemoirs/Images/About/DSC06071.JPG" class="image-placeholder">';
 //imageContainer.src = '/LightMemoirs/Images/About/DSC06071.JPG';
 console.log("image container set");
 //imageContainer.style.backgroundImage = "url('Images/About/DSC06071.JPG')";
