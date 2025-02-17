@@ -4,31 +4,32 @@ html {
     width: 100%;
 }
 body {
-    height: 100%;
-    width: 100%;
+    margin: 0 auto; /*centers the body container with respect to the window*/
 }
 /* Header */
 header {
     /*position: absolute;
     top: 0px;  Attach to the top of the viewport.Works only with absolute positioning */
     height: 10%;
-    width: 100%;
+    /*width: 100%;*/
     background: #333;
     color: #fff;
     padding: 20px 10px;
     text-align: center;
     border: 3px solid red;
+    
 }
 
 footer {
-   /* position:absolute;
+    /* position:absolute;
     bottom: 0px;  Attach to the bottom of the viewport. Works only with absolute positioning*/
     height: 5%;
-    width:100%;
+    /*width: 100%;*/
     color: #333;
     background-color: lightslategrey;
     text-align: center;
     border: 3px solid #73AD21;
+   
 }
 
 header h1 {
@@ -59,8 +60,8 @@ h2 {
     
 }
 .image-placeholder {
-    width: 400px; /* Set width of the placeholder */
-    height: 400px; /* Set height of the placeholder */
+    width: 200px; /* Set width of the placeholder */
+    height: 200px; /* Set height of the placeholder */
     background-color: #cccccc; /* Set placeholder background color */
     border-radius: 50%; /*Makes the placeholder a circle*/
 }

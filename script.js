@@ -31,26 +31,29 @@ for (let i = 1; i <= 6; i++) {
     //img.alt = `Placeholder ${i}`;
     //gallery.appendChild(img);
 }
-function resizeViewport(width, height) {
-    let container = document.getElementById("aboutContainer")
+function resizeViewport(width, height, elementId) {
+    let container = document.getElementsByClassName(elementId)
     container.style.width = width;
-    container.style.height = height;
+    container.style.height = height;    
 }
 
 
-function getDeviceType() {
+function adjustViewport() {
     const userAgent = navigator.userAgent.toLowerCase();
 
-    if (/mobile|android|iphone|ipod|blackberry|opera mini|iemobile|wpdesktop/.test(userAgent)) {
-        resizeViewport("480px", "800px");
-        return "Mobile";
-    } else if (/tablet|ipad/.test(userAgent)) {
-        resizeViewport("768px", "1024px");
-        return "Tablet";
+    if (/mobile|android|iphone|ipod|blackberry|opera mini|iemobile|wpdesktop|tablet|ipad/.test(userAgent)) {
+        return false;
     } else {
-        resizeViewport("1920px","1080px");
-        return "Desktop";
+        return true;
     }
 }
 
-console.log("Device Type:", getDeviceType());
+//console.log("Device size:", adjustViewport("aboutContainer"));
+console.log("window width" + window.innerWidth);
+const isDesktop = adjustViewport();
+window.addEventListener("resize", () => {
+    if (isDesktop) {
+        if (window.innerWidth > 1920) resizeViewport("1920px", window.innerHeight,"about");
+    }
+    else resizeViewport(window.innerWidth, window.innerHeight,"about");
+});
