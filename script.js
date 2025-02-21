@@ -1,4 +1,4 @@
-website = new Website();
+const website = new Website();
 website.createWebsite();
 
 
