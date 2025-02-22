@@ -1,31 +1,9 @@
-website = new Website();
-website.createWebsite();
-
-
 class Website{
 
     home = new Home();
     about = new About();
     photography = new Photography();
     videography = new Videography();
-    
-    createWebsite(){
-        const isDesktop = adjustViewport();
-        window.addEventListener("resize", () => {
-            if (isDesktop) {
-                if (window.innerWidth > 1920) resizeViewport("1920px", window.innerHeight,"about");
-            }
-            else resizeViewport(window.innerWidth, window.innerHeight,"about");
-        });
-
-        setHeader();
-        setFooter();
-        this.about.createPage();
-        this.home.createPage();
-        this.photography.createPage();
-        this.videography.createPage();
-        console.log("website created");
-    }
 
     adjustViewport() {
         const userAgent = navigator.userAgent.toLowerCase();
@@ -35,6 +13,8 @@ class Website{
         } else {
             return true;
         }
+
+        
     }
 
     resizeViewport(width, height, elementId) {
@@ -50,6 +30,24 @@ class Website{
     setFooter(){
 
     }
+
+    createWebsite(){
+        const isDesktop = this.adjustViewport();
+        window.addEventListener("resize", () => {
+            if (isDesktop) {
+                if (window.innerWidth > 1920) resizeViewport("1920px", window.innerHeight,"about");
+            }
+            else this.resizeViewport(window.innerWidth, window.innerHeight,"about");
+        });
+
+        this.setHeader();
+        this.setFooter();
+        this.about.createPage();
+        this.home.createPage();
+        this.photography.createPage();
+        this.videography.createPage();
+        console.log("website created");
+    }
 }
 //Home page
 class Home{
@@ -61,13 +59,6 @@ class Home{
 class About{
     imagePath;
     infoText;
-
-    createPage(){
-        this.setProfileImage();
-        this.setProfileInfo();
-        this.setContactInfo();
-        console.log("about page created");
-    }
 
     setProfileImage(){
         const imageContainer = document.getElementById('aboutImage');
@@ -82,16 +73,19 @@ class About{
 
     }
 
+    createPage(){
+        this.setProfileImage();
+        this.setProfileInfo();
+        this.setContactInfo();
+        console.log("about page created");
+    }
+
+
 }
 
 
 //Photography Page
 class Photography{
-
-    createPage(){
-        this.setLayout();
-        console.log("photography page created");
-    }
 
     setLayout(){
         const gallery = document.getElementById('photographyGallery');
@@ -106,16 +100,19 @@ class Photography{
     updatePhotoDatabase(){
     
     }
+
+    createPage(){
+        this.setLayout();
+        console.log("photography page created");
+    }
+
 }
 
 
 //Videography page
 class Videography{
 
-    createPage(){
-        console.log("videography page created");
-    }
-
+    
     setLayout(){
 
     }
@@ -123,7 +120,14 @@ class Videography{
     updateVideoDatabase(){
 
     }
+
+    createPage(){
+        console.log("videography page created");
+    }
     
 }
 
+//main
+const website = new Website();
+website.createWebsite();
 
