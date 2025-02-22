@@ -1,11 +1,11 @@
 class Website{
-
+    isDesktop;
     home = new Home();
     about = new About();
     photography = new Photography();
     videography = new Videography();
 
-    adjustViewport() {
+    isDesktopResolution(){
         const userAgent = navigator.userAgent.toLowerCase();
     
         if (/mobile|android|iphone|ipod|blackberry|opera mini|iemobile|wpdesktop|tablet|ipad/.test(userAgent)) {
@@ -13,8 +13,6 @@ class Website{
         } else {
             return true;
         }
-
-        
     }
 
     resizeViewport(width, height, elementId) {
@@ -23,6 +21,17 @@ class Website{
         container.style.height = height;    
     }
 
+    adjustViewport() {
+        this.isDesktop = this.isDesktopResolution();
+        window.addEventListener("resize", () => {
+            if (this.isDesktop) {
+                if (window.innerWidth > 1920) resizeViewport("1920px", window.innerHeight,"about");
+            }
+            else this.resizeViewport(window.innerWidth, window.innerHeight,"about");
+        });
+    }
+
+    
     setHeader(){
 
     }
@@ -32,14 +41,7 @@ class Website{
     }
 
     createWebsite(){
-        const isDesktop = this.adjustViewport();
-        window.addEventListener("resize", () => {
-            if (isDesktop) {
-                if (window.innerWidth > 1920) resizeViewport("1920px", window.innerHeight,"about");
-            }
-            else this.resizeViewport(window.innerWidth, window.innerHeight,"about");
-        });
-
+        this.adjustViewport();
         this.setHeader();
         this.setFooter();
         this.about.createPage();
@@ -62,7 +64,7 @@ class About{
 
     setProfileImage(){
         const imageContainer = document.getElementById('aboutImage');
-        imageContainer.innerHTML = '<img src="LightMemoirs/Images/About/DSC06071.JPG" class="image-placeholder">';
+        imageContainer.innerHTML = '<img src="Images/About/DSC06071.JPG" class="image-placeholder">';
     }
     
     setProfileInfo(){
@@ -86,6 +88,10 @@ class About{
 
 //Photography Page
 class Photography{
+    isDesktop;
+    Photography(isDesktop){
+        this.isDesktop = isDesktop;
+    }
 
     setLayout(){
         const gallery = document.getElementById('photographyGallery');

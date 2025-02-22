@@ -12,12 +12,13 @@ header {
     top: 0px;  Attach to the top of the viewport.Works only with absolute positioning */
     height: 10%;
     /*width: 100%;*/
+    clip-path: polygon(10% 100%, 90% 100%, 100% 0%, 0% 0%);
     background: #333;
     color: #fff;
     padding: 20px 10px;
     text-align: center;
     border: 3px solid red;
-    
+    z-index:1;
 }
 
 footer {
@@ -25,11 +26,12 @@ footer {
     bottom: 0px;  Attach to the bottom of the viewport. Works only with absolute positioning*/
     height: 5%;
     /*width: 100%;*/
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
     color: #333;
     background-color: lightslategrey;
     text-align: center;
     border: 3px solid #73AD21;
-   
+    z-index:1;
 }
 
 header h1 {
@@ -64,6 +66,7 @@ h2 {
     height: 200px; /* Set height of the placeholder */
     background-color: #cccccc; /* Set placeholder background color */
     border-radius: 50%; /*Makes the placeholder a circle*/
+    z-index:0;
 }
 
 
@@ -85,6 +88,7 @@ h2 {
     height: 70%;
     display: flex;
     place-items: center;
+    z-index:0;
 }
 .about_contact {
     /*position:absolute;*/
