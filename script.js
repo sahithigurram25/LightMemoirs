@@ -62,7 +62,7 @@ class About{
 
     setProfileImage(){
         const imageContainer = document.getElementById('aboutImage');
-        imageContainer.innerHTML = '<img src="/Images/About/DSC06071.JPG" class="image-placeholder">';
+        imageContainer.innerHTML = '<img src="LightMemoirs/Images/About/DSC06071.JPG" class="image-placeholder">';
     }
     
     setProfileInfo(){
