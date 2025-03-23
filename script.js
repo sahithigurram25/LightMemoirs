@@ -40,6 +40,19 @@ class Website{
 
     }
 
+    setContactPanel(){
+
+    }
+
+    setTagsPanel(){
+
+    }
+
+    setNavigationPanels(){
+        this.setContactPanel();
+        this.setTagsPanel();
+    }
+
     createWebsite(){
         this.adjustViewport();
         this.setHeader();
@@ -133,6 +146,21 @@ class Videography{
     
 }
 
+class DeviceType{
+    static MONITOR = "monitor";
+    static MOBILE = "mobile";
+    static TABLET = "tablet"; 
+}
+class NavigationPanels{
+
+
+    NavigationPanels(){
+
+    }
+    setNavigationPanels(){
+
+    }
+}
 //main
 const website = new Website();
 website.createWebsite();
