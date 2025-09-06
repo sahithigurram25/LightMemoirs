@@ -20,11 +20,10 @@ header {
     z-index:1;
 }
 
-.navigation_panel{
-    position : fixed;
-    height : 100%;
-    width : 100%;
-    z-index: 1;
+
+.nav_bar{
+    display:"flex";
+    flex-direction:row;
 }
 
 footer {
@@ -40,9 +39,8 @@ footer {
 }
 
 .side{
-    position : fixed;
+    width:10%;
     height:100%;
-    width:100%;
     background-color: rgba(162, 214, 40, 0.2);
     backdrop-filter: blur(10px);   
 }
@@ -80,12 +78,17 @@ h2 {
     z-index:0;
 }
 
-
+.container{
+    width:100vw;
+    height:100vh;
+}
 .flex_row {
+    position:relative;
     display: flex;
     flex-direction: row;
 }
 .flex_column {
+    position:relative;
     display: flex;
     flex-direction: column;
 }
