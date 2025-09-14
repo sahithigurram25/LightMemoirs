@@ -1,0 +1,48 @@
+{
+  "type": {
+    "photo": [
+      {
+        "filename": "photo1.jpg",
+        "tags": [
+          "newphototag1",
+          "newphototag2"
+        ],
+        "date_uploaded": "2025-09-06",
+        "date_created": "2025-08-30",
+        "date_unuploaded": ""
+      },
+      {
+        "filename": "photo2.jpg",
+        "tags": [
+          "portrait",
+          "studio"
+        ],
+        "date_uploaded": "2025-09-05",
+        "date_created": "2025-08-29",
+        "date_unuploaded": ""
+      }
+    ],
+    "video": [
+      {
+        "filename": "video1.mp4",
+        "tags": [
+          "newvideotag1",
+          "newvideotag2"
+        ],
+        "date_uploaded": "2025-09-04",
+        "date_created": "2025-08-28",
+        "date_unuploaded": ""
+      },
+      {
+        "filename": "video2.mp4",
+        "tags": [
+          "travel",
+          "adventure"
+        ],
+        "date_uploaded": "2025-09-03",
+        "date_created": "2025-08-27",
+        "date_unuploaded": ""
+      }
+    ]
+  }
+}
